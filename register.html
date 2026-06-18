@@ -3,15 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng Nhập</title>
+    <title>Đăng ký</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <body>
       <div class="page-account">
         <div class="form-account">
-          <h1 class="inner-title">Đăng nhập</h1>
-          <p class="inner-desc">Vui lòng nhập email và mật khẩu để tiếp tục</p>
+          <h1 class="inner-title">Đăng ký</h1>
+          <p class="inner-desc">Tạo một tài khoản để tiếp tục</p>
           <form class="inner-form" action="">
+            <div class="inner-group">
+              <label class="inner-label" for="fullName">Họ tên</label>
+              <input class="inner-control" type="text" id="fullName" name="fullName" placeholder="Ví dụ: Lê Văn A">
+            </div>
             <div class="inner-group">
               <label class="inner-label" for="email">Email</label>
               <input class="inner-control" type="email" id="email" name="email" placeholder="Ví dụ: levana@gmail.com">
@@ -33,12 +37,12 @@
                     </symbol>
                   </svg>
                 </div>
-                <label for="rememberPassword">Nhớ mật khẩu</label>
-              </div><a href="#">Quên mật khẩu?</a>
+                <label for="rememberPassword">Tôi chấp nhận các điều khoản và điều kiện</label>
+              </div>
             </div>
-            <button class="inner-button">Đăng Nhập</button>
+            <button class="inner-button">Đăng Ký</button>
           </form>
-          <div class="inner-more"><span>Bạn chưa có tài khoản?   </span><a href="#">Tạo tài khoản</a></div>
+          <div class="inner-more"><span>Bạn đã có tài khoản?   </span><a href="#">Đăng nhập</a></div>
         </div>
       </div>
     </body>

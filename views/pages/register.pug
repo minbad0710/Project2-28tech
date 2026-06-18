@@ -2,14 +2,23 @@ extends ../layouts/account.pug
 include ../mixins/checkbox.pug
 
 block title
-  title Đăng Nhập
+  title Đăng ký
 
 block main 
   .form-account
-    h1.inner-title Đăng nhập
-    p.inner-desc Vui lòng nhập email và mật khẩu để tiếp tục
+    h1.inner-title Đăng ký
+    p.inner-desc Tạo một tài khoản để tiếp tục
 
     form.inner-form(action= "")
+      .inner-group
+        label.inner-label(for = 'fullName') Họ tên
+        input(
+          type = 'text'
+          id = 'fullName'
+          name = 'fullName'
+          placeholder = 'Ví dụ: Lê Văn A'
+          class = 'inner-control'
+        )
       .inner-group
         label.inner-label(for = 'email') Email
         input(
@@ -30,12 +39,11 @@ block main
       .inner-meta
         .inner-check
           +checkbox-30('rememberPassword', 'rememberPassword')
-          label(for = 'rememberPassword') Nhớ mật khẩu
-        
-        a(href = '#') Quên mật khẩu?
+          label(for = 'rememberPassword') Tôi chấp nhận các điều khoản và điều kiện
+
       
-      button.inner-button Đăng Nhập
+      button.inner-button Đăng Ký
 
     .inner-more
-      span Bạn chưa có tài khoản?   
-      a(href = '#') Tạo tài khoản
+      span Bạn đã có tài khoản?   
+      a(href = '#') Đăng nhập
