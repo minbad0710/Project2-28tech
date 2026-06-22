@@ -287,3 +287,274 @@ input, textarea, select, button{
     }
 }
 /* End check box wrapper 30 */
+
+/* Header */
+.header{
+    height : 70px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E0E0E0;
+    display : flex;
+    align-items: center;
+}
+
+.header .inner-left{
+    width : 240px;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.header .inner-logo{
+    font-weight : 800;
+    font-size : 24px;
+}
+
+.header .inner-logo span:first-child{
+    color : var(--color-main);
+}
+
+.header .inner-logo span:last-child{
+    color : var(--color-text);
+}
+
+.header .inner-right{
+    flex : 1;
+    display : flex;
+    justify-content : flex-end;
+    align-items: center;
+    gap : 40px;
+    padding-right : 30px;
+}
+
+.header .inner-right .inner-notify{
+    position : relative
+}
+
+.header .inner-right .inner-notify img{
+    height : 25px;
+}
+
+.header .inner-notify span{
+    background-color : #F93C65;
+    color : #FFFFFF;
+    font-weight : 700;
+    font-size : 12px;
+    min-width : 16px;
+    height : 16px;
+    border-radius : 20px; 
+    padding : 0 4px; 
+    /* Add padding vào để khi content kéo dài thì ô đó nó vẫn kéo dài ra */
+    display : inline-flex; 
+    /* phải sửa thành inline-flex để add được padding trái phải */
+    justify-content : center;
+    align-items : center;
+    position : absolute;
+    top : -4px;
+    left : 12px;
+    /* chỉnh sửa left chứ không chỉnh sửa right để khi con số lớn hơn thì nó không bị 
+    đẩy về phía bên trái mà kéo dài sang bên phải */
+
+}
+
+.header .inner-account{
+    display : flex;
+    gap : 10px;
+    align-items : center;
+}
+
+.header .inner-account img{
+    width : 44px;
+    aspect-ratio : 1/1;
+    border-radius : 50%;
+    object-fit : cover;
+}
+
+.header .inner-account .inner-text{
+    flex : 1;
+}
+
+.header .inner-account .inner-name{
+    font-weight : 700;
+    font-size : 14px;
+    color : #404040;
+}
+
+.header .inner-account .inner-role{
+    font-weight : 600;
+    font-size : 12px;
+    color : #565656;
+    margin-top : 3px;
+}
+/* End Header */
+
+/* Main */
+.main{
+    display : flex;
+}
+/* End Main */
+
+/* Sider */
+.sider{
+    background-color : #FFFFFF;
+    width : 240px;
+    overflow : auto;
+    border-right: 1px solid #E0E0E0;
+    height : calc(100vh - 70px);
+
+}
+
+.sider .inner-list{
+    display : grid;
+    padding : 16px 0;
+}
+
+.sider .inner-item{
+    display : flex;
+    align-items: center;
+    gap : 12px;
+    padding : 12px 16px;
+    margin : 0 10px 0 24px;
+    font-weight : 600;
+    font-size : 14px;
+    color : #202224;
+    position : relative;
+
+}
+
+.sider .inner-item::before{
+    content : '';
+    width : 9px;
+    height : 100%;
+    display : block;
+    /* tại vì before thuộc tính là inline, 
+    nếu muốn chỉnh sửa width và height thì phải đổi thành block */
+    border-radius : 4px;
+    background-color: var(--color-main);
+    position : absolute;
+    top : 0;
+    left : -28.5px; 
+    /* Thụt 24px là khoảng cách từ khối inner-item đến lề, 
+    thụt thêm 4.5 nữa là kích thước của 1 nửa khối đó */
+
+    opacity : 0;
+}      
+
+.sider .inner-item.active, .sider .inner-item:hover{
+    background-color: var(--color-main);
+    color : #FFFFFF;
+    border-radius : 6px;
+}
+.sider .inner-item.active::before, .sider .inner-item:hover::before{
+    opacity : 1;
+}
+.sider .inner-item.active img, .sider .inner-item:hover img{
+    filter : brightness(0) invert(1);
+    /* Thuộc tính để chỉnh ảnh thành màu trắng */
+}
+
+.sider .inner-logout{
+    color : #F93C65;
+}
+
+.sider .inner-line{
+    border: 0.6px solid #E0E0E0;
+}
+/* End Sider */
+
+/* Content */
+.content{
+    background-color: #F5F6FA;
+    flex : 1;
+    height : calc(100vh - 70px);
+    overflow : auto;
+    padding : 30px;
+}
+/* End Content */
+
+/* Box title */
+.box-title{
+    font-weight : 700;
+    font-size : 32px;
+    color : var(--color-text);
+    margin-top : 0;
+    margin-bottom : 30px;
+}
+
+/* End box title */
+
+/* Section 1 */
+.section-1{
+    display : grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap : 30px;
+}
+
+.section-1 .inner-item{
+    background-color: #FFFFFF;
+    border-radius : 14px;
+    padding : 28px 0;
+    display : flex;
+    align-items : center;
+    justify-content: center;
+    gap : 20px;
+}
+
+.section-1 .inner-item img{
+    height : 60px;
+    width : auto;
+
+}
+
+.section-1 .inner-content .inner-text{
+    font-weight : 600;
+    font-size : 16px;
+    margin-bottom : 4px;
+    color : var(--color-text);
+}
+
+.section-1 .inner-content .inner-number{
+    font-weight : 700;
+    font-size : 28px;
+    margin-bottom : 4px;
+    color : var(--color-text);
+}
+/* End section 1 */
+
+/* Section 2 */
+.section-2{
+    margin-top : 30px;
+    background-color: #FFFFFF;
+    border-radius : 14px;
+    padding : 32px;
+}
+
+.section-2 .inner-head{
+    margin-bottom : 32px;
+    display : flex;
+    align-items : center;
+    justify-content: space-between;
+}
+
+.section-2 .inner-head .inner-title{
+    font-weight : 700;
+    font-size : 24px;
+    color : var(--color-text);
+    margin : 0;
+}
+
+.section-2 .inner-head .inner-input{
+    width : 180px;
+    height : 28px;
+    border: 0.6px solid #D5D5D5;
+    background-color: #FCFDFD;
+    border-radius : 4px;
+    padding : 9px 16px;
+    font-weight : 600;
+    font-size : 12px;
+    color : var(--color-text);
+}
+
+.section-2 .inner-chart{
+    height : 273px;
+    background-color: #dfdfdf;
+}

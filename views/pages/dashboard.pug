@@ -1,0 +1,33 @@
+extends ../layouts/default.pug
+block title 
+  title Tổng quan
+
+block main
+  h1.box-title Tổng quan 
+  //Section 1
+  .section-1
+    .inner-item 
+      img(src = 'assets/imgs/section-1-icon-1.svg')
+      .inner-content 
+        .inner-text Người dùng
+        .inner-number 1.200
+    .inner-item 
+      img(src = 'assets/imgs/section-1-icon-2.svg')
+      .inner-content 
+        .inner-text Đơn hàng
+        .inner-number 3.600
+    .inner-item 
+      img(src = 'assets/imgs/section-1-icon-3.svg')
+      .inner-content 
+        .inner-text Doanh thu
+        .inner-number 300.000.000đ
+  //End section 1
+
+  //Section 2
+  .section-2
+    .inner-head 
+      h2.inner-title Biểu đồ doanh thu
+      input.inner-input(type = 'month')
+    
+    .inner-chart Hiển thị Biểu đồ
+  //End section 2
