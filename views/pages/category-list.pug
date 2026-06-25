@@ -1,0 +1,97 @@
+extends ../layouts/default.pug
+include ../mixins/checkbox.pug
+block title 
+  title Quản lý danh mục
+block main
+  h1.box-title Quản lý danh mục
+  //Section 4
+  .section-4 
+    .inner-wrap 
+      .inner-item 
+        <i class="fa-solid fa-filter"></i> Bộ lọc 
+      
+      .inner-item 
+        select
+          option(value = '') Trạng thái
+          option(value = '') Hoạt động
+          option(value = '') Tạm dừng
+  
+      .inner-item 
+        select
+          option(value = '') Người tạo
+          option(value = '') Lê Văn A
+          option(value = '') Lê Văn B
+
+      .inner-item 
+        input(type = 'date')
+        span  - 
+        input(type = 'date')
+
+      .inner-item.inner-reset 
+        <i class="fa-solid fa-rotate-left"></i> Xóa bộ lọc
+
+  //End section 4
+
+  //Section 5
+  .section-5 
+    form.inner-status(action="")
+      .inner-item 
+        select
+          option(value = '') -- Hành động --
+          option(value = '') Hoạt động
+          option(value = '') Tạm dừng
+          option(value = '') Xóa
+      
+      .inner-item 
+        button Áp dụng
+      
+    form.inner-search(action="")
+      button <i class="fa-solid fa-magnifying-glass"></i>
+      input(type = 'text' placeholder = 'Tìm kiếm') 
+
+    a.inner-create(href = '#') + Tạo mới
+
+  // End section 5
+
+  //Section 6
+  .section-6 
+    table 
+      thead 
+        tr 
+          th 
+            +checkbox-30('', '')
+          
+          th Tên danh mục
+          th Ảnh đại diện 
+          th Vị trí
+          th Trạng thái 
+          th Tạo bởi
+          th Cập nhật bởi 
+          th Hành động
+      
+      tbody 
+        tr
+          td 
+            +checkbox-30('', '')
+          td Danh mục 1
+          td 
+            img(src = 'assets/imgs/demo-tour-1.png')
+          td 1
+          td
+            .tag.tag-green Hoạt động
+          
+          td
+            div Lê Văn A
+            div 16:30 - 20/10/2024
+          
+          td 
+            div Lê Văn A
+            div 16:30 - 20/10/2024
+          
+          td
+            .inner-action
+              a(href = '#') <i class="fa-solid fa-pen-to-square"></i>
+              a(href = '#' class = 'inner-remove') <i class="fa-regular fa-trash-can"></i>
+
+  //End section 6
+

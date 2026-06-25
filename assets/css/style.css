@@ -385,6 +385,33 @@ input, textarea, select, button{
     color : #565656;
     margin-top : 3px;
 }
+
+.header .inner-button-menu{
+    display : None;
+}
+
+@media(max-width : 992px){
+    .header .inner-left{
+        width : auto;
+        padding-left : 30px;
+    }
+    .header .inner-button-menu{
+        display : block;
+        font-size : 24px;
+        cursor : pointer;
+    }
+}
+
+@media(max-width : 576px){
+    .header .inner-left{
+        padding-left : 15px;
+    }
+
+    .header .inner-right{
+        padding-right : 15px;
+        gap : 20px;
+    }
+}
 /* End Header */
 
 /* Main */
@@ -459,6 +486,12 @@ input, textarea, select, button{
 .sider .inner-line{
     border: 0.6px solid #E0E0E0;
 }
+
+@media(max-width : 992px){
+    .sider{
+        display : None;
+    }
+}
 /* End Sider */
 
 /* Content */
@@ -469,6 +502,12 @@ input, textarea, select, button{
     overflow : auto;
     padding : 30px;
 }
+
+@media(max-width : 576px){
+    .content{
+        padding : 15px;
+    }
+}
 /* End Content */
 
 /* Box title */
@@ -478,6 +517,11 @@ input, textarea, select, button{
     color : var(--color-text);
     margin-top : 0;
     margin-bottom : 30px;
+}
+@media(max-width : 576px){
+    .box-title{
+        font-size : 24px;
+    }
 }
 
 /* End box title */
@@ -517,6 +561,19 @@ input, textarea, select, button{
     font-size : 28px;
     margin-bottom : 4px;
     color : var(--color-text);
+}
+
+@media(max-width : 1200px){
+    .section-1{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width : 768px){
+    .section-1{
+        grid-template-columns: 1fr;
+    }
+
 }
 /* End section 1 */
 
@@ -558,3 +615,287 @@ input, textarea, select, button{
     height : 273px;
     background-color: #dfdfdf;
 }
+
+@media(max-width : 576px){
+    .section-2{
+        padding : 20px 15px;
+    }
+
+    .section-2 .inner-head{
+        flex-wrap : wrap;
+        gap : 10px;
+    }
+
+}
+/* End section 2 */
+
+/* Section 3 */
+.section-3{
+    margin-top : 30px;
+    background-color: #FFFFFF;
+    border-radius : 14px;
+    padding : 32px;
+}
+
+.section-3 .inner-title-main{
+    font-weight : 700;
+    font-size : 24px;
+    color : var(--color-text);
+    margin-top : 0;
+    margin-bottom : 30px;
+}
+.section-3 .inner-table{
+    overflow : auto;
+}
+.section-3 .inner-table table{
+    width : 100%;
+    border-collapse : collapse;
+    min-width : 1076px;
+}
+
+.section-3 .inner-table thead th{
+    background-color: #F1F4F9;
+    padding : 15px;
+    text-align : left;
+    font-weight : 700;
+    font-size : 14px;
+    color : var(--color-text);
+}
+
+.section-3 .inner-table thead th:first-child{
+    border-radius : 12px 0 0 12px;
+}
+
+.section-3 .inner-table thead th:last-child{
+    border-radius : 0 12px 12px 0;
+}
+
+.section-3 .inner-table tbody td{
+    padding : 10px 15px; 
+    /* Trên dưới ta đo được là 10, còn trái phải là ta để đồng bộ với th */
+    text-align : left;
+    font-weight : 600;
+    font-size : 14px;
+    border-bottom : 0.4px solid rgba(151, 151, 151, 0.4);
+    color : var(--color-text);
+}
+
+@media(max-width : 576px){
+    .section-3{
+        padding : 20px 15px;
+    }
+}
+/* End section 3 */
+
+/* Text */
+.text-main{
+    color : var(--color-main);
+}
+
+.text-right{
+    text-align : right !important;
+}
+/* End text */
+
+/* Tour list */
+.tour-list{
+    display : grid;
+    gap : 10px;
+}
+
+.tour-list .inner-item{
+    display : flex;
+    text-align : center;
+    gap : 10px;
+}
+
+.tour-list .inner-item img{
+    width : 76px;
+    aspect-ratio : 1/1;
+    border-radius : 6px;
+    object-fit: cover;
+}
+
+.tour-list .inner-item .inner-content{
+    text-align : left;
+    flex : 1;
+}
+.tour-list .inner-item .inner-title{
+    font-weight : 400;
+    font-size : 14px;
+    color : var(--color-text);
+    margin-bottom : 3px;
+}
+
+.tour-list .inner-item .inner-desc{
+    display : grid;
+    gap : 3px;
+    color : var(--color-text);
+    font-weight : 400;
+    font-size : 12px;
+}
+/* End tour list */
+
+/* Tag */
+.tag{
+    display : inline-flex;
+    padding : 6px 24px;
+    font-weight : 700;
+    font-size : 12px;
+    border-radius : 4.5px;
+}
+
+.tag-orange{
+    color : #FFA756;
+    background-color: rgba(255, 168, 86, 0.2);
+}
+.tag-green{
+    color : #00B69B;
+    background-color: rgba(0, 182, 155, 0.2);
+}
+.tag-red{
+    color : #EF3826;
+    background-color: rgba(239, 55, 38, 0.2);
+}
+/* End tag */
+
+/* Section 4 */
+.section-4{
+    margin-bottom : 15px;
+}
+
+.section-4 .inner-wrap{
+    display : inline-flex;
+    /* Kích thước giới hạn bằng kích thước phần tử bên trong */
+    background-color : #FFFFFF;
+    border: 0.6px solid #D5D5D5;
+    border-radius : 14px;
+}
+
+.section-4 .inner-item{
+    padding : 24px;
+    border-left: 0.3px solid rgba(151, 151, 151, 0.6862);
+    display : inline-flex;
+    align-items : center;
+    gap : 12px;
+    font-weight : 700;
+    font-size : 14px;
+    color : var(--color-text);
+}
+
+.section-4 .inner-item:first-child{
+    border-left : 0;
+}
+
+.section-4 .inner-item i{
+    font-size : 15px;
+}
+
+.section-4 .inner-item select, .section-4 .inner-item input{
+    border : 0;
+    font-weight : 700;
+    font-size : 14px;
+    /* Lưu ý ở bên trên là ta áp dụng cho inner-item chứ chưa phải là select và input */
+    color : var(--color-text);
+    cursor : pointer;
+}
+
+.section-4 .inner-item input{
+    width : 110px;
+}
+
+.section-4 .inner-reset{
+    color : #EA0234;
+    cursor : pointer;
+}
+
+/* End section 4 */
+/* Section 5 */
+.section-5{
+    margin-bottom : 30px;
+    display : flex;
+    gap : 20px;
+}
+
+.section-5 .inner-status{
+    border: 0.6px solid #D5D5D5;
+    display : inline-flex;
+    background-color: #FFFFFF;
+    border-radius : 14px;
+}
+
+.section-5 .inner-status .inner-item{
+    padding : 25px 24px;
+    border-left : 0.3px solid #979797
+}
+
+.section-5 .inner-status .inner-item:first-child{
+    border-left : 0;
+}
+
+.section-5 .inner-status .inner-item select{
+    border : 0;
+    font-weight : 700;
+    font-size : 14px;
+    color : var(--color-text);
+    cursor : pointer;
+}
+
+.section-5 .inner-status .inner-item button{
+    border : 0;
+    background-color: transparent;
+    color : #EA0234;
+    font-weight : 600;
+    font-size : 14px;
+    padding : 0;
+    cursor : pointer;
+}
+
+.section-5 .inner-search{
+    border-radius : 14px;
+    background-color: white; 
+    border: 1px solid #E2E2E2;
+    display : inline-flex;
+    align-items: center;
+    padding : 25px 24px;
+    gap : 15px;
+    width : 366px;
+}
+
+.section-5 .inner-search button{
+    border : 0;
+    background-color: transparent;
+    opacity : 0.5;
+    cursor : pointer;
+    padding : 0;
+    /* Với thẻ button ta thường để padding 0 */
+    font-size : 20px;
+    color : var(--color-text);
+}
+
+.section-5 .inner-search input{
+    border : 0;
+    flex : 1;
+    font-weight : 700;
+    font-size : 14px;
+    color : var(--color-text);
+}
+
+.section-5 .inner-search input::placeholder{
+    color : #979797;
+}
+
+.section-5 .inner-create{
+    border-radius : 14px;
+    background-color : var(--color-main);
+    opacity : 0.9;
+    padding : 25px 50px;
+    /* Trên figma không chuẩn hoàn toàn chỗ padding ngang */
+    font-weight : 700;
+    font-size : 14px;
+    color : #FFFFFF;
+    cursor : pointer;
+    display : inline-flex;
+    align-items: center;
+}
+/* End section 5 */
