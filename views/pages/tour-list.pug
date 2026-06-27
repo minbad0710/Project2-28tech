@@ -1,9 +1,9 @@
 extends ../layouts/default.pug
 include ../mixins/checkbox.pug
 block title 
-  title Quản lý danh mục
+  title Quản lý tour
 block main
-  h1.box-title Quản lý danh mục
+  h1.box-title Quản lý tour
   //Section 4
   .section-4 
     .inner-wrap 
@@ -26,6 +26,23 @@ block main
         input(type = 'date')
         span  - 
         input(type = 'date')
+      
+      .inner-item 
+        select
+          option(value = '') Danh mục
+          option(value = '') Danh mục 1
+          option(value = '') Danh mục 2
+
+      .inner-item 
+        select
+          option(value = '') Mức giá
+          option(value = '') Dưới 1tr
+          option(value = '') Từ 1tr đến 3tr
+          option(value = '') Từ 3tr đến 5tr
+          option(value = '') Từ 5tr đến 7tr
+          option(value = '') Từ 7tr đến 10tr
+          option(value = '') Trên 10tr
+  
 
       .inner-item.inner-reset 
         <i class="fa-solid fa-rotate-left"></i> Xóa bộ lọc
@@ -50,6 +67,7 @@ block main
       input(type = 'text' placeholder = 'Tìm kiếm') 
 
     a.inner-create(href = '#') + Tạo mới
+    a.inner-trash(href = '#') Thùng rác
 
   // End section 5
 
@@ -62,10 +80,12 @@ block main
             th 
               +checkbox-30('', '')
             
-            th Tên danh mục
+            th Tên tour
             th Ảnh đại diện 
+            th Giá
+            th Còn lại
             th Vị trí
-            th Trạng thái 
+            th Trạng thái
             th Tạo bởi
             th Cập nhật bởi 
             th Hành động
@@ -74,9 +94,17 @@ block main
           tr
             td 
               +checkbox-30('', '')
-            td Danh mục 1
+            td Tour Hạ Long
             td 
               img(src = 'assets/imgs/demo-tour-1.png' class = 'inner-avatar')
+            td 
+              div NL: 1.900.000đ
+              div TE: 1.600.000đ
+              div EB: 1.000.000đ
+            td 
+              div NL: 30
+              div TE: 20
+              div EB: 10
             td 1
             td
               .tag.tag-green Hoạt động
@@ -96,9 +124,17 @@ block main
           tr
             td 
               +checkbox-30('', '')
-            td Danh mục 2
+            td Tour Hạ Long
             td 
               img(src = 'assets/imgs/demo-tour-1.png' class = 'inner-avatar')
+            td 
+              div NL: 1.900.000đ
+              div TE: 1.600.000đ
+              div EB: 1.000.000đ
+            td 
+              div NL: 30
+              div TE: 20
+              div EB: 10
             td 2
             td
               .tag.tag-red Tạm dừng

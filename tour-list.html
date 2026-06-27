@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý danh mục</title>
+    <title>Quản lý tour</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <body>
@@ -32,7 +32,7 @@
         <!--End sider-->
         <!--Content-->
         <div class="content">
-          <h1 class="box-title">Quản lý danh mục</h1>
+          <h1 class="box-title">Quản lý tour</h1>
           <!--Section 4-->
           <div class="section-4"> 
             <div class="inner-wrap"> 
@@ -55,6 +55,24 @@
               <div class="inner-item"> 
                 <input type="date"><span> - </span>
                 <input type="date">
+              </div>
+              <div class="inner-item"> 
+                <select>
+                  <option value="">Danh mục</option>
+                  <option value="">Danh mục 1</option>
+                  <option value="">Danh mục 2</option>
+                </select>
+              </div>
+              <div class="inner-item"> 
+                <select>
+                  <option value="">Mức giá</option>
+                  <option value="">Dưới 1tr</option>
+                  <option value="">Từ 1tr đến 3tr</option>
+                  <option value="">Từ 3tr đến 5tr</option>
+                  <option value="">Từ 5tr đến 7tr</option>
+                  <option value="">Từ 7tr đến 10tr</option>
+                  <option value="">Trên 10tr</option>
+                </select>
               </div>
               <div class="inner-item inner-reset">
                  <i class="fa-solid fa-rotate-left"></i> Xóa bộ lọc</div>
@@ -79,7 +97,7 @@
             <form class="inner-search" action="">
               <button><i class="fa-solid fa-magnifying-glass"></i></button>
               <input type="text" placeholder="Tìm kiếm">
-            </form><a class="inner-create" href="#">+ Tạo mới</a>
+            </form><a class="inner-create" href="#">+ Tạo mới</a><a class="inner-trash" href="#">Thùng rác</a>
           </div>
           <!-- End section 5-->
           <!--Section 6-->
@@ -101,10 +119,12 @@
                         </svg>
                       </div>
                     </th>
-                    <th>Tên danh mục</th>
+                    <th>Tên tour</th>
                     <th>Ảnh đại diện </th>
+                    <th>Giá</th>
+                    <th>Còn lại</th>
                     <th>Vị trí</th>
-                    <th>Trạng thái </th>
+                    <th>Trạng thái</th>
                     <th>Tạo bởi</th>
                     <th>Cập nhật bởi </th>
                     <th>Hành động</th>
@@ -125,8 +145,18 @@
                         </svg>
                       </div>
                     </td>
-                    <td>Danh mục 1</td>
+                    <td>Tour Hạ Long</td>
                     <td> <img class="inner-avatar" src="assets/imgs/demo-tour-1.png"></td>
+                    <td> 
+                      <div>NL: 1.900.000đ</div>
+                      <div>TE: 1.600.000đ</div>
+                      <div>EB: 1.000.000đ</div>
+                    </td>
+                    <td> 
+                      <div>NL: 30</div>
+                      <div>TE: 20</div>
+                      <div>EB: 10</div>
+                    </td>
                     <td>1</td>
                     <td>
                       <div class="tag tag-green">Hoạt động</div>
@@ -157,8 +187,18 @@
                         </svg>
                       </div>
                     </td>
-                    <td>Danh mục 2</td>
+                    <td>Tour Hạ Long</td>
                     <td> <img class="inner-avatar" src="assets/imgs/demo-tour-1.png"></td>
+                    <td> 
+                      <div>NL: 1.900.000đ</div>
+                      <div>TE: 1.600.000đ</div>
+                      <div>EB: 1.000.000đ</div>
+                    </td>
+                    <td> 
+                      <div>NL: 30</div>
+                      <div>TE: 20</div>
+                      <div>EB: 10</div>
+                    </td>
                     <td>2</td>
                     <td>
                       <div class="tag tag-red">Tạm dừng</div>

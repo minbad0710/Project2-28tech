@@ -1,0 +1,47 @@
+extends ../layouts/default.pug
+
+block title 
+  title Tạo danh mục  
+
+block main 
+  h1.box-title Tạo danh mục 
+
+  //Section 8
+  .section-8 
+    form
+      .inner-group
+        label(for = '') Tên danh mục 
+        input(type = 'text', name = '', id = '')
+      
+      .inner-group 
+        label(for = '') Danh mục cha 
+        select
+          option(value = '') -- Chọn danh mục -- 
+          option(value = '') Danh mục 1
+          option(value = '') Danh mục 2
+        
+      .inner-group 
+        label(for = '') Vị trí
+        input(type = 'number', name = '', id = '')
+      
+      .inner-group 
+        label(for = '') Trạng thái 
+        select 
+          option(value = '') Hoạt động
+          option(value = '') Tạm dừng 
+      
+      .inner-group.inner-two-col 
+        label(for = '') Ảnh đại diện 
+        input(type = 'file' name = '' id = '')
+
+      .inner-group.inner-two-col 
+        label(for = '') Mô tả
+        textarea(name = '' id = '')
+      
+      .inner-group.inner-two-col.text-center 
+        button Tạo mới
+    .inner-link 
+      a(href = '#') Quay lại danh sách 
+
+
+  //End section 8
