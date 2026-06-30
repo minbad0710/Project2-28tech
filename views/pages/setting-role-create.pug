@@ -1,0 +1,45 @@
+extends ../layouts/default.pug
+include ../mixins/checkbox.pug
+block title 
+  title Tạo nhóm quyền
+
+block main 
+  h1.box-title Tạo nhóm quyền
+
+  //Section 8
+  .section-8 
+    form
+      .inner-group
+        label(for = '') Tên nhóm quyền
+        input(type = 'text', name = '', id = '')
+
+      .inner-group
+        label(for = '') Mô tả ngắn
+        input(type = 'text', name = '', id = '')
+      
+      .inner-group 
+        label(for = '') Phân quyền
+        .inner-checkbox-list 
+          .inner-checkbox-item
+            +checkbox-30('', '')
+            label(for = '') Xem trang tổng quan
+          .inner-checkbox-item
+            +checkbox-30('', '')
+            label(for = '') Xem danh mục
+          .inner-checkbox-item
+            +checkbox-30('', '')
+            label(for = '') Tạo danh mục
+          .inner-checkbox-item
+            +checkbox-30('', '')
+            label(for = '') Sửa danh mục
+          .inner-checkbox-item
+            +checkbox-30('', '')
+            label(for = '') Xóa danh mục
+    
+      .inner-group.inner-two-col.text-center 
+        button Tạo mới
+    .inner-link 
+      a(href = '#') Quay lại danh sách 
+
+
+  //End section 8

@@ -700,6 +700,10 @@ input, textarea, select, button{
 .text-center{
     text-align: center;
 }
+
+.text-red{
+    color : #EF3826;
+}
 /* End text */
 
 /* Tour list */
@@ -712,6 +716,10 @@ input, textarea, select, button{
     display : flex;
     text-align : center;
     gap : 10px;
+}
+
+.tour-list.inner-large .inner-item img{
+    width : 115px;
 }
 
 .tour-list .inner-item img{
@@ -739,6 +747,7 @@ input, textarea, select, button{
     font-weight : 400;
     font-size : 12px;
 }
+
 /* End tour list */
 
 /* Tag */
@@ -1169,6 +1178,73 @@ input, textarea, select, button{
     padding : 0;
 }
 
+.section-8 .inner-schedule-list{
+    display : grid;
+    gap : 15px;
+    margin-bottom : 15px;
+}
+
+.section-8 .inner-schedule-item{
+    padding : 20px;
+    border: 0.6px solid #D5D5D5;
+    background-color: #FFFFFF;
+    border-radius : 4px;
+}
+
+.section-8 .inner-schedule-item .inner-schedule-head{
+    display : flex;
+    gap : 15px;
+    margin-bottom : 15px;
+    align-items : center;
+}
+
+.section-8 .inner-schedule-head .inner-schedule-button{
+    padding : 17px;
+    background-color: #F5F6FA;
+    border: 0.6px solid #D5D5D5;
+    color : #A6A6A6;
+    font-size : 18px;
+    width : 52px;
+    height : 52px;
+    border-radius : 4px;
+    display : inline-flex;
+    align-items : center;
+    justify-content : center;
+    cursor : pointer;
+
+
+}
+
+.section-8 .inner-schedule-head .inner-schedule-button.inner-remove{
+    color : #EF3826;
+}
+
+.section-8 .inner-schedule-head input{
+    flex : 1;
+
+}
+
+.section-8 .inner-schedule-body textarea{
+    height : 300px;
+}
+
+.section-8 .inner-schedule-create{
+    background-color: #D5D5D5;
+    border-radius : 4px;
+    opacity : 0.9;
+    display : inline-flex;
+    padding : 10px 20px;
+    font-weight : 700;
+    font-size : 14px;
+    color : var(--color-text);
+    cursor : pointer;
+}
+
+.section-8 .inner-text{
+    font-weight : 600;
+    font-size : 14px;
+    color : var(--color-text);
+}
 
 @media(max-width : 768px){
     .section-8{
@@ -1184,4 +1260,116 @@ input, textarea, select, button{
         grid-column: span 1;
     }
 }
+
+@media(max-width : 576px){
+    .section-8 .inner-schedule-head{
+        flex-wrap : wrap;
+    }
+    .section-8 .inner-schedule-head input{
+        flex : none;
+        width : 100%;
+        order : 1;
+    }
+}
 /* End section 8 */
+
+/* Section 9 */
+.section-9{
+    display : grid;
+    gap : 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.section-9 .inner-item{
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    background-color : #FFFFFF;
+    border-radius : 14px;
+    padding : 25px;
+    gap : 20px;
+}
+
+.section-9 .inner-item img{
+    height : 70px;
+    width : auto;
+}
+
+.section-9 .inner-item span{
+    font-weight : 700;
+    font-size : 18px;
+    color : var(--color-text);
+}
+
+@media(max-width : 1200px){
+    .section-9{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width : 768px){
+    .section-9{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* End section 9 */
+
+/* Section 10 */
+.section-10{
+    background-color : #FFFFFF;
+    border: 0.3px solid #B9B9B9;
+    border-radius : 14px;
+    padding : 80px;
+    text-align : center;
+}
+
+.section-10 .inner-image{
+    margin-bottom : 60px;
+    width : 390px;
+    height : auto;
+}
+
+.section-10 .inner-text{
+    margin-bottom : 30px;
+    font-weight : 700;
+    font-size : 32px;
+    color : var(--color-text);
+}
+
+.section-10 .inner-link{
+    display : inline-flex;
+    background-color : var(--color-main);
+    border-radius : 8px;
+    opacity :0.9;
+    cursor :pointer;
+    padding : 15px 104px;
+    font-weight : 700;
+    font-size : 20px;
+    color : white;
+
+}
+
+@media(max-width : 768px){
+    .section-10{
+        padding : 40px 20px;
+    }
+
+    .section-10 .inner-image{
+        margin-bottom : 30px;
+        width : 200px;
+    }
+
+    .section-10 .inner-text{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .section-10 .inner-link{
+        padding : 15px 40px;
+        font-size : 16px;
+    }
+
+}
+/* End section 10 */

@@ -1,0 +1,67 @@
+extends ../layouts/default.pug
+include ../mixins/checkbox.pug
+block title 
+  title Nhóm quyền
+block main
+  h1.box-title Nhóm quyền
+
+
+  //Section 5
+  .section-5 
+    form.inner-status(action="")
+      .inner-item 
+        select
+          option(value = '') -- Hành động --
+          option(value = '') Hoạt động
+          option(value = '') Tạm dừng
+          option(value = '') Xóa
+      
+      .inner-item 
+        button Áp dụng
+      
+    form.inner-search(action="")
+      button <i class="fa-solid fa-magnifying-glass"></i>
+      input(type = 'text' placeholder = 'Tìm kiếm') 
+    
+    a.inner-create(href = '#') + Tạo mới
+
+  // End section 5
+
+  //Section 6
+  .section-6 
+    .inner-table
+      table 
+        thead 
+          tr 
+            th 
+              +checkbox-30('', '')
+            th Tên nhóm quyền
+            th Mô tả ngắn
+            th Hành động
+        
+        tbody 
+          tr
+            td 
+              +checkbox-30('', '')
+            td Quản trị viên
+            td Có đầy đủ các quyền
+            td
+              .inner-action
+                a(href = '#') <i class="fa-solid fa-pen-to-square"></i>
+                a(href = '#' class = 'inner-remove') <i class="fa-regular fa-trash-can"></i>
+        
+
+  //End section 6
+
+
+  //Section 7
+
+  .section-7
+    .inner-text Hiển thị 1 - 9 của 78
+    select 
+      option(value = '') Trang 1
+      option(value = '') Trang 2
+      option(value = '') Trang 3
+
+  //End section 7
+

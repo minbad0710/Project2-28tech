@@ -1,0 +1,109 @@
+extends ../layouts/default.pug
+include ../mixins/checkbox.pug
+block title 
+  title Tài khoản quản trị
+block main
+  h1.box-title Tài khoản quản trị
+  //Section 4
+  .section-4 
+    .inner-wrap 
+      .inner-item 
+        <i class="fa-solid fa-filter"></i> Bộ lọc 
+      
+      .inner-item 
+        select
+          option(value = '') Trạng thái
+          option(value = '') Hoạt động
+          option(value = '') Tạm dừng
+  
+
+      .inner-item 
+        input(type = 'date')
+        span  - 
+        input(type = 'date')
+      
+      .inner-item 
+        select
+          option(value="") Nhóm quyền
+          option(value="") Quản trị viên
+          option(value="") Quản lý đơn hàng
+          option(value="") Quản lý tour
+  
+
+      .inner-item.inner-reset 
+        <i class="fa-solid fa-rotate-left"></i> Xóa bộ lọc
+
+  //End section 4
+
+  //Section 5
+  .section-5 
+    form.inner-status(action="")
+      .inner-item 
+        select
+          option(value = '') -- Hành động --
+          option(value = '') Hoạt động
+          option(value = '') Tạm dừng
+          option(value = '') Xóa
+      
+      .inner-item 
+        button Áp dụng
+      
+    form.inner-search(action="")
+      button <i class="fa-solid fa-magnifying-glass"></i>
+      input(type = 'text' placeholder = 'Tìm kiếm') 
+
+    a.inner-create(href = '#') + Tạo mới
+
+  // End section 5
+
+  //Section 6
+  .section-6 
+    .inner-table
+      table 
+        thead 
+          tr 
+            th 
+              +checkbox-30('', '')
+            
+            th Họ tên
+            th Ảnh đại diện 
+            th Email
+            th Số điện thoại
+            th Nhóm quyền
+            th Chức vụ
+            th Trạng thái
+            th Hành động
+        
+        tbody 
+          tr
+            td 
+              +checkbox-30('', '')
+            td Lê Văn A
+            td 
+              img(src = 'assets/imgs/demo-favicon.png' class = 'inner-avatar')
+            td levana@gmail.com
+            td 01234567890
+            td Quản trị viên
+            td Giám đốc
+            td
+              .tag.tag-green Hoạt động
+            
+            td
+              .inner-action
+                a(href = '#') <i class="fa-solid fa-pen-to-square"></i>
+                a(href = '#' class = 'inner-remove') <i class="fa-regular fa-trash-can"></i>
+          
+  //End section 6
+
+
+  //Section 7
+
+  .section-7
+    .inner-text Hiển thị 1 - 9 của 78
+    select 
+      option(value = '') Trang 1
+      option(value = '') Trang 2
+      option(value = '') Trang 3
+
+  //End section 7
+

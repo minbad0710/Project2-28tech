@@ -1,0 +1,121 @@
+extends ../layouts/default.pug
+include ../mixins/checkbox.pug
+block title 
+  title Thùng rác tour
+block main
+  h1.box-title Thùng rác tour
+  //Section 5
+  .section-5 
+    form.inner-status(action="")
+      .inner-item 
+        select
+          option(value = '') -- Hành động --
+          option(value = '') Hoạt động
+          option(value = '') Tạm dừng
+          option(value = '') Xóa
+      
+      .inner-item 
+        button Áp dụng
+      
+    form.inner-search(action="")
+      button <i class="fa-solid fa-magnifying-glass"></i>
+      input(type = 'text' placeholder = 'Tìm kiếm') 
+
+  // End section 5
+
+  //Section 6
+  .section-6 
+    .inner-table
+      table 
+        thead 
+          tr 
+            th 
+              +checkbox-30('', '')
+            
+            th Tên tour
+            th Ảnh đại diện 
+            th Giá
+            th Còn lại
+            th Vị trí
+            th Trạng thái
+            th Tạo bởi
+            th Cập nhật bởi 
+            th Hành động
+        
+        tbody 
+          tr
+            td 
+              +checkbox-30('', '')
+            td Tour Hạ Long
+            td 
+              img(src = 'assets/imgs/demo-tour-1.png' class = 'inner-avatar')
+            td 
+              div NL: 1.900.000đ
+              div TE: 1.600.000đ
+              div EB: 1.000.000đ
+            td 
+              div NL: 30
+              div TE: 20
+              div EB: 10
+            td 1
+            td
+              .tag.tag-green Hoạt động
+            
+            td
+              div Lê Văn A
+              .inner-item 16:30 - 20/10/2024
+            
+            td 
+              div Lê Văn A
+              .inner-item 16:30 - 20/10/2024
+            
+            td
+              .inner-action
+                a(href = '#') <i class="fa-solid fa-rotate-left"></i>
+                a(href = '#' class = 'inner-remove') <i class="fa-regular fa-trash-can"></i>
+          tr
+            td 
+              +checkbox-30('', '')
+            td Tour Hạ Long
+            td 
+              img(src = 'assets/imgs/demo-tour-1.png' class = 'inner-avatar')
+            td 
+              div NL: 1.900.000đ
+              div TE: 1.600.000đ
+              div EB: 1.000.000đ
+            td 
+              div NL: 30
+              div TE: 20
+              div EB: 10
+            td 2
+            td
+              .tag.tag-red Tạm dừng
+            
+            td
+              div Lê Văn B
+              .inner-item 16:30 - 20/10/2024
+            
+            td 
+              div Lê Văn B
+              .inner-item 16:30 - 20/10/2024
+            
+            td
+              .inner-action
+                a(href = '#') <i class="fa-solid fa-rotate-left"></i>
+                a(href = '#' class = 'inner-remove') <i class="fa-regular fa-trash-can"></i>
+        
+
+  //End section 6
+
+
+  //Section 7
+
+  .section-7
+    .inner-text Hiển thị 1 - 9 của 78
+    select 
+      option(value = '') Trang 1
+      option(value = '') Trang 2
+      option(value = '') Trang 3
+
+  //End section 7
+
