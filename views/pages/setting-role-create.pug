@@ -8,33 +8,40 @@ block main
 
   //Section 8
   .section-8 
-    form
+    form(id="settingRoleCreateForm")
       .inner-group
-        label(for = '') Tên nhóm quyền
-        input(type = 'text', name = '', id = '')
+        label(for="name") Tên nhóm quyền *
+        input(type="text" name="name" id="name")
+
 
       .inner-group
-        label(for = '') Mô tả ngắn
-        input(type = 'text', name = '', id = '')
+        label(for="description") Mô tả ngắn
+        input(type="text" name="description" id="description")
+
       
       .inner-group 
         label(for = '') Phân quyền
         .inner-checkbox-list 
           .inner-checkbox-item
-            +checkbox-30('', '')
-            label(for = '') Xem trang tổng quan
+            +checkbox-30("permissions", "id-1", "value-1")
+            label(for="id-1") Xem trang Tổng quan
+
           .inner-checkbox-item
-            +checkbox-30('', '')
-            label(for = '') Xem danh mục
+            +checkbox-30("permissions", "id-2", "value-2")
+            label(for="id-2") Xem danh mục
+
           .inner-checkbox-item
-            +checkbox-30('', '')
-            label(for = '') Tạo danh mục
+            +checkbox-30("permissions", "id-3", "value-3")
+            label(for="id-3") Tạo danh mục
+
           .inner-checkbox-item
-            +checkbox-30('', '')
-            label(for = '') Sửa danh mục
+            +checkbox-30("permissions", "id-4", "value-4")
+            label(for="id-4") Sửa danh mục
+
           .inner-checkbox-item
-            +checkbox-30('', '')
-            label(for = '') Xóa danh mục
+            +checkbox-30("permissions", "id-5", "value-5")
+            label(for="id-5") Xóa danh mục
+
     
       .inner-group.inner-two-col.text-center 
         button Tạo mới

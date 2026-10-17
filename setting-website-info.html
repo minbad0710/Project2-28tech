@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thông tin website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.tiny.cloud/1/nunk7rd3o8wt6vw4dnbfgaj2dt1b4jrnqrf50jy5o1d3nbf6/tinymce/8/tinymce.min.js" referrerpolicy="origin" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet">
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <body>
       <!--Header-->
@@ -35,30 +38,30 @@
           <h1 class="box-title">Thông tin website</h1>
           <!--Section 8-->
           <div class="section-8"> 
-            <form>
+            <form id="settingWebsiteInfoForm">
               <div class="inner-group">
-                <label for="">Tên website </label>
-                <input type="text" name="" id="">
+                <label for="websiteName">Tên website</label>
+                <input type="text" name="websiteName" id="websiteName">
               </div>
               <div class="inner-group">
-                <label for="">Số điện thoại</label>
-                <input type="text" name="" id="">
+                <label for="phone">Số điện thoại</label>
+                <input type="text" name="phone" id="phone">
               </div>
               <div class="inner-group">
-                <label for="">Email</label>
-                <input type="email" name="" id="">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
               </div>
               <div class="inner-group"> 
-                <label for="">Địa chỉ</label>
-                <input type="text" name="" id="">
+                <label for="address">Địa chỉ</label>
+                <input type="text" name="address" id="address">
               </div>
               <div class="inner-group">
-                <label for="">Logo </label>
-                <input type="file" name="" id="">
+                <label for="logo">Logo</label>
+                <input type="file" name="logo" id="logo" filepond-image>
               </div>
               <div class="inner-group">
-                <label for="">Favicon</label>
-                <input type="file" name="" id="">
+                <label for="favicon">Favicon</label>
+                <input type="file" name="favicon" id="favicon" filepond-image>
               </div>
               <div class="inner-group inner-two-col text-center"> 
                 <button>Cập nhật</button>
@@ -70,6 +73,12 @@
         </div>
         <!--End content-->
       </main>
+      <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
+      <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+      <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"> </script>
+      <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+      <script src="assets/JS/script.js"></script>
     </body>
   </head>
 </html>

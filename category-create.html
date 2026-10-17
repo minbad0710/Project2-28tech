@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tạo danh mục  </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.tiny.cloud/1/nunk7rd3o8wt6vw4dnbfgaj2dt1b4jrnqrf50jy5o1d3nbf6/tinymce/8/tinymce.min.js" referrerpolicy="origin" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet">
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <body>
       <!--Header-->
@@ -35,37 +38,37 @@
           <h1 class="box-title">Tạo danh mục </h1>
           <!--Section 8-->
           <div class="section-8"> 
-            <form>
+            <form id="categoryCreateForm">
               <div class="inner-group">
-                <label for="">Tên danh mục </label>
-                <input type="text" name="" id="">
+                <label for="name">Tên danh mục *</label>
+                <input type="text" name="name" id="name">
               </div>
               <div class="inner-group"> 
-                <label for="">Danh mục cha </label>
-                <select>
+                <label for="parent">Danh mục cha </label>
+                <select name="parent" id="parent">
                   <option value="">-- Chọn danh mục -- </option>
-                  <option value="">Danh mục 1</option>
-                  <option value="">Danh mục 2</option>
+                  <option value="id-danh-muc-1">Danh mục 1</option>
+                  <option value="id-danh-muc-2">Danh mục 2</option>
                 </select>
               </div>
               <div class="inner-group"> 
-                <label for="">Vị trí</label>
-                <input type="number" name="" id="">
+                <label for="position">Vị trí</label>
+                <input type="number" name="position" id="position">
               </div>
               <div class="inner-group"> 
-                <label for="">Trạng thái </label>
-                <select> 
-                  <option value="">Hoạt động</option>
-                  <option value="">Tạm dừng </option>
+                <label for="status">Trạng thái </label>
+                <select name="status" id="status">
+                  <option value="active">Hoạt động</option>
+                  <option value="inactive">Tạm dừng </option>
                 </select>
               </div>
               <div class="inner-group inner-two-col"> 
-                <label for="">Ảnh đại diện </label>
-                <input type="file" name="" id="">
+                <label for="avatar">Ảnh đại diện </label>
+                <input type="file" name="avatar" id="avatar" filepond-image>
               </div>
               <div class="inner-group inner-two-col"> 
-                <label for="">Mô tả</label>
-                <textarea name="" id=""></textarea>
+                <label>Mô tả</label>
+                <textarea name="description" id="description" textarea-mce></textarea>
               </div>
               <div class="inner-group inner-two-col text-center"> 
                 <button>Tạo mới</button>
@@ -77,6 +80,12 @@
         </div>
         <!--End content-->
       </main>
+      <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
+      <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+      <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"> </script>
+      <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+      <script src="assets/JS/script.js"></script>
     </body>
   </head>
 </html>

@@ -8,43 +8,51 @@ block main
 
   //Section 8
   .section-8 
-    form
+    form(id="settingAccountAdminCreateForm")
       .inner-group
-        label(for = '') Họ tên
-        input(type = 'text', name = '', id = '')
+        label(for="fullName") Họ tên *
+        input(type="text" name="fullName" id="fullName")
+
       
       .inner-group
-        label(for = '') Email
-        input(type = 'email', name = '', id = '')
+        label(for="email") Email *
+        input(type="email" name="email" id="email")
+
 
       .inner-group
-        label(for = '') Số điện thoại
-        input(type = 'text', name = '', id = '')
+        label(for="phone") Số điện thoại
+        input(type="text" name="phone" id="phone")
+
       
       .inner-group
-        label(for="") Nhóm quyền
-        select(name="" id="")
-          option(value="") Quản trị viên
-          option(value="") Quản lý đơn hàng
+        label(for="role") Nhóm quyền
+        select(name="role" id="role")
+          option(value="value-quan-tri-vien") Quản trị viên
+          option(value="value-quan-ly-don-hang") Quản lý đơn hàng
+
       
       .inner-group
-        label(for = '') Chức vụ
-        input(type = 'text', name = '', id = '')
+        label(for="positionCompany") Chức vụ
+        input(type="text" name="positionCompany" id="positionCompany")
+
       
       .inner-group
-        label(for="") Trạng thái
-        select(name="" id="")
-          option(value="") Hoạt động
-          option(value="") Tạm dừng
+        label(for="status") Trạng thái
+        select(name="status" id="status")
+          option(value="active") Hoạt động
+          option(value="inactive") Tạm dừng
+
         
       .inner-group 
-        label(for = '') Mật khẩu
-        input(type = 'password', name = '', id = '')
+        label(for="password") Mật khẩu *
+        input(type="text" name="password" id="password")
+
 
       
       .inner-group.inner-two-col 
-        label(for = '') Ảnh đại diện 
-        input(type = 'file' name = '' id = '')
+        label(for="avatar") Ảnh đại diện
+        input(type="file" name="avatar" id="avatar" filepond-image)
+
 
       
       .inner-group.inner-two-col.text-center 

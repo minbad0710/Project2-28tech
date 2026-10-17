@@ -8,31 +8,37 @@ block main
 
   //Section 8
   .section-8 
-    form
+    form(id="settingWebsiteInfoForm")
       .inner-group
-        label(for = '') Tên website 
-        input(type = 'text', name = '', id = '')
+        label(for="websiteName") Tên website
+        input(type="text" name="websiteName" id="websiteName")
+
 
       .inner-group
-        label(for = '') Số điện thoại
-        input(type = 'text', name = '', id = '')
+        label(for="phone") Số điện thoại
+        input(type="text" name="phone" id="phone")
+
 
       .inner-group
-        label(for = '') Email
-        input(type = 'email', name = '', id = '')
+        label(for="email") Email
+        input(type="email" name="email" id="email")
+
     
       .inner-group 
-        label(for = '') Địa chỉ
-        input(type = 'text', name = '', id = '')
+        label(for="address") Địa chỉ
+        input(type="text" name="address" id="address")
+
       
 
       .inner-group
-        label(for = '') Logo 
-        input(type = 'file' name = '' id = '')
+        label(for="logo") Logo
+        input(type="file" name="logo" id="logo" filepond-image)
+
 
       .inner-group
-        label(for = '') Favicon
-        input(type = 'file' name = '' id = '')
+        label(for="favicon") Favicon
+        input(type="file" name="favicon" id="favicon" filepond-image)
+
       
       .inner-group.inner-two-col.text-center 
         button Cập nhật

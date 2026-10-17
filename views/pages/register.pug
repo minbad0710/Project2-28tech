@@ -9,7 +9,7 @@ block main
     h1.inner-title Đăng ký
     p.inner-desc Tạo một tài khoản để tiếp tục
 
-    form.inner-form(action= "")
+    form.inner-form(id="registerForm")
       .inner-group
         label.inner-label(for = 'fullName') Họ tên
         input(
@@ -39,7 +39,7 @@ block main
       .inner-meta
         .inner-check
           +checkbox-30('rememberPassword', 'rememberPassword')
-          label(for = 'rememberPassword') Tôi chấp nhận các điều khoản và điều kiện
+          label(for="agree") Tôi chấp nhận các điều khoản và điều kiện *
 
       
       button.inner-button Đăng Ký

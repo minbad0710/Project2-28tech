@@ -11,7 +11,7 @@
         <div class="form-account">
           <h1 class="inner-title">Đăng ký</h1>
           <p class="inner-desc">Tạo một tài khoản để tiếp tục</p>
-          <form class="inner-form" action="">
+          <form class="inner-form" id="registerForm">
             <div class="inner-group">
               <label class="inner-label" for="fullName">Họ tên</label>
               <input class="inner-control" type="text" id="fullName" name="fullName" placeholder="Ví dụ: Lê Văn A">
@@ -27,7 +27,7 @@
             <div class="inner-meta">
               <div class="inner-check">
                 <div class="checkbox-wrapper-30"><span class="checkbox">
-                    <input type="checkbox" id="rememberPassword" name="rememberPassword"/>
+                    <input type="checkbox" id="rememberPassword" name="rememberPassword" value=""/>
                     <svg>
                       <use class="checkbox" xlink:href="#checkbox-30"></use>
                     </svg></span>
@@ -37,7 +37,7 @@
                     </symbol>
                   </svg>
                 </div>
-                <label for="rememberPassword">Tôi chấp nhận các điều khoản và điều kiện</label>
+                <label for="agree">Tôi chấp nhận các điều khoản và điều kiện *</label>
               </div>
             </div>
             <button class="inner-button">Đăng Ký</button>
@@ -45,6 +45,8 @@
           <div class="inner-more"><span>Bạn đã có tài khoản?   </span><a href="#">Đăng nhập</a></div>
         </div>
       </div>
+      <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+      <script src="assets/JS/account.js"> </script>
     </body>
   </head>
 </html>

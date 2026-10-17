@@ -8,43 +8,43 @@ block main
 
   //Section 8
   .section-8 
-    form
+    form(id = "orderEditForm")
       .inner-group
-        label(for = '') Tên khách hàng 
-        input(type = 'text', name = '', id = '')
+        label(for = 'fullName') Tên khách hàng *
+        input(type = 'text', name = 'fullName', id = 'fullName' value = 'Nguyễn Văn A')
       
       .inner-group
-        label(for = '') Số điện thoại
-        input(type = 'text', name = '', id = '')
+        label(for = 'phone') Số điện thoại *
+        input(type = 'text', name = 'phone', id = 'phone' value = '0123456789')
 
       .inner-group.inner-two-col 
-        label(for = '') Ghi chú
-        textarea(name = '' id = '')
+        label(for = 'note') Ghi chú
+        textarea(name = 'note' id = 'note')
       
       .inner-group 
-        label(for = '') Phương thức thanh toán
-        select
-          option(value="") Tiền mặt
-          option(value="") ZaloPay
-          option(value="") VNPay
-          option(value="") Chuyển khoản
+        label(for = 'paymentMethod') Phương thức thanh toán
+        select(name = 'paymentMethod' id = 'paymentMethod')
+          option(value="money") Tiền mặt
+          option(value="zalopay") ZaloPay
+          option(value="vnpay") VNPay
+          option(value="bank") Chuyển khoản
       
       .inner-group 
-        label(for = '') Trạng thái thanh toán
-        select
-          option(value="") Đã thanh toán
-          option(value="") Chưa thanh toán
+        label(for = 'paymentStatus') Trạng thái thanh toán
+        select(name = 'paymentStatus' id = 'paymentStatus')
+          option(value="paid") Đã thanh toán
+          option(value="unpaid") Chưa thanh toán
       
       .inner-group 
         label(for = '') Ngày đặt
         input(type="text" name="" id="" value="16:40 - 01/01/2024" readonly)
       
       .inner-group 
-        label(for = '') Trạng thái 
-        select 
-          option(value = '') Khởi tạo
-          option(value="") Hoàn thành
-          option(value="") Đã hủy
+        label(for = 'status') Trạng thái 
+        select(name = 'status' id = 'status')
+          option(value = 'initial') Khởi tạo
+          option(value="completed") Hoàn thành
+          option(value="cancel") Đã hủy
       
       .inner-group 
         label(for = '') Danh sách tour 

@@ -8,30 +8,36 @@ block main
 
   //Section 8
   .section-8 
-    form
+    form(id="profileEditForm")
       .inner-group
-        label(for = '') Họ tên
-        input(type = 'text', name = '', id = '')
+        label(for="fullName") Họ tên *
+        input(type="text" name="fullName" id="fullName" value="Lê Văn A")
+
       
       .inner-group
-        label(for = '') Email
-        input(type = 'email', name = '', id = '')
+        label(for="email") Email *
+        input(type="email" name="email" id="email" value="levana@gmail.com")
+
 
       .inner-group
-        label(for = '') Số điện thoại
-        input(type = 'text', name = '', id = '')
+        label(for="phone") Số điện thoại
+        input(type="text" name="phone" id="phone")
+
       
       .inner-group
-        label(for = '') Chức vụ
-        input(type = 'text', name = '', id = '', value = 'Giám đốc' readonly)
+        label Chức vụ
+        input(type="text" value="Giám đốc" readonly)
+
 
       .inner-group
-        label(for = '') Nhóm quyền
-        input(type = 'text', name = '', id = '', value = 'Quản trị viên' readonly)
+        label Nhóm quyền
+        input(type="text" value="Quản trị viên" readonly)
+
 
       .inner-group.inner-two-col 
-        label(for = '') Ảnh đại diện 
-        input(type = 'file' name = '' id = '')
+        label(for="avatar") Ảnh đại diện
+        input(type="file" name="avatar" id="avatar" filepond-image)
+
 
       .inner-group.inner-two-col.text-center 
         button Cập nhật

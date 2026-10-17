@@ -11,7 +11,7 @@
         <div class="form-account">
           <h1 class="inner-title">Đăng nhập</h1>
           <p class="inner-desc">Vui lòng nhập email và mật khẩu để tiếp tục</p>
-          <form class="inner-form" action="">
+          <form class="inner-form" id="loginForm">
             <div class="inner-group">
               <label class="inner-label" for="email">Email</label>
               <input class="inner-control" type="email" id="email" name="email" placeholder="Ví dụ: levana@gmail.com">
@@ -23,7 +23,7 @@
             <div class="inner-meta">
               <div class="inner-check">
                 <div class="checkbox-wrapper-30"><span class="checkbox">
-                    <input type="checkbox" id="rememberPassword" name="rememberPassword"/>
+                    <input type="checkbox" id="rememberPassword" name="rememberPassword" value=""/>
                     <svg>
                       <use class="checkbox" xlink:href="#checkbox-30"></use>
                     </svg></span>
@@ -41,6 +41,8 @@
           <div class="inner-more"><span>Bạn chưa có tài khoản?   </span><a href="#">Tạo tài khoản</a></div>
         </div>
       </div>
+      <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+      <script src="assets/JS/account.js"> </script>
     </body>
   </head>
 </html>

@@ -8,139 +8,127 @@ block main
 
   //Section 8
   .section-8 
-    form
+    form(id = "tourCreateForm")
       .inner-group
-        label(for = '') Tên tour
-        input(type = 'text', name = '', id = '')
+        label(for = '') Tên tour *
+        input(type = 'text', name = 'name', id = 'name')
       
       .inner-group 
-        label(for = '') Danh mục
-        select
+        label(for = 'category') Danh mục
+        select(name = 'category', id = 'category')
           option(value = '') -- Chọn danh mục -- 
-          option(value = '') Danh mục 1
-          option(value = '') Danh mục 2
+          option(value = 'danh-muc-1') Danh mục 1
+          option(value = 'danh-muc-2') Danh mục 2
         
       .inner-group 
-        label(for = '') Vị trí
-        input(type = 'number', name = '', id = '')
+        label(for = 'position') Vị trí
+        input(type = 'number', name = 'position', id = 'position')
       
       .inner-group 
-        label(for = '') Trạng thái 
+        label(for = 'status') Trạng thái 
         select 
-          option(value = '') Hoạt động
-          option(value = '') Tạm dừng 
+          option(value = 'active') Hoạt động
+          option(value = 'inactive') Tạm dừng 
       
       .inner-group.inner-two-col 
-        label(for = '') Ảnh đại diện 
-        input(type = 'file' name = '' id = '')
+        label(for = 'avatar') Ảnh đại diện 
+        input(type = 'file' name = 'avatar' id = 'avatar' filepond-image)
 
       .inner-group 
-        label(for = '') Giá cũ
+        label Giá cũ
         .inner-input-list 
           .inner-input-item
-            label(for = '') Người lớn
-            input(type = 'text' name = '' id = '')
+            label(for = 'priceAdult') Người lớn
+            input(type = 'text' name = 'priceAdult' id = 'priceAdult')
 
           .inner-input-item
-            label(for = '') Trẻ em
-            input(type = 'text' name = '' id = '')
+            label(for = 'priceChildren') Trẻ em
+            input(type = 'text' name = 'priceChildren' id = 'priceChildren')
 
           .inner-input-item
-            label(for = '') Em bé
-            input(type = 'text' name = '' id = '')
+            label(for = 'priceBaby') Em bé
+            input(type = 'text' name = 'priceBaby' id = 'priceBaby')
 
       .inner-group 
-        label(for = '') Giá mới
+        label Giá mới
         .inner-input-list 
           .inner-input-item
-            label(for = '') Người lớn
-            input(type = 'text' name = '' id = '')
+            label(for = 'priceNewAdult') Người lớn
+            input(type = 'text' name = 'priceNewAdult' id = 'priceNewAdult')
 
           .inner-input-item
-            label(for = '') Trẻ em
-            input(type = 'text' name = '' id = '')
+            label(for = 'priceNewChildren') Trẻ em
+            input(type = 'text' name = 'priceNewChildren' id = 'priceNewChildren')
 
           .inner-input-item
-            label(for = '') Em bé
-            input(type = 'text' name = '' id = '')
+            label(for = 'priceNewBaby') Em bé
+            input(type = 'text' name = 'priceNewBaby' id = 'priceNewBaby')
 
       .inner-group 
-        label(for = '') Còn lại
+        label Còn lại
         .inner-input-list 
           .inner-input-item
-            label(for = '') Người lớn
-            input(type = 'text' name = '' id = '')
+            label(for = 'stockAdult') Người lớn
+            input(type = 'text' name = 'stockAdult' id = 'stockAdult')
 
           .inner-input-item
-            label(for = '') Trẻ em
-            input(type = 'text' name = '' id = '')
+            label(for = 'stockChildren') Trẻ em
+            input(type = 'text' name = 'stockChildren' id = 'stockChildren')
 
           .inner-input-item
-            label(for = '') Em bé
-            input(type = 'text' name = '' id = '')
+            label(for = 'stockBaby') Em bé
+            input(type = 'text' name = 'stockBaby' id = 'stockBaby')
       
       .inner-group 
-        label(for = '') Những địa điểm có tour
+        label Những địa điểm có tour
         .inner-checkbox-list 
           .inner-checkbox-item
-            +checkbox-30('', '')
+            +checkbox-30('locations', 'id-location-1', 'id-location-1')
             label(for = '') Hà Nội
           .inner-checkbox-item
-            +checkbox-30('', '')
+            +checkbox-30('locations', 'id-location-2', 'id-location-2')
             label(for = '') Đà Nẵng
           .inner-checkbox-item
-            +checkbox-30('', '')
+            +checkbox-30('locations', 'id-location-3', 'id-location-3')
             label(for = '') Nha Trang
           .inner-checkbox-item
-            +checkbox-30('', '')
+            +checkbox-30('locations', 'id-location-4', 'id-location-4')
             label(for = '') Hồ Chí Minh
       .inner-group
-        label(for = '') Thời gian
-        input(type = 'text', name = '', id = '')
+        label(for = 'time') Thời gian
+        input(type = 'text', name = 'time', id = 'time')
 
       .inner-group
-        label(for = '') Phương tiện
-        input(type = 'text', name = '', id = '')
+        label(for = 'vehicle') Phương tiện
+        input(type = 'text', name = 'vehicle', id = 'vehicle')
       
       .inner-group
-        label(for = '') Ngày khởi hành
-        input(type = 'text', name = '', id = '')
+        label(for = 'departureDate') Ngày khởi hành
+        input(type = 'text', name = 'departureDate', id = 'departureDate')
     
       .inner-group.inner-two-col 
-        label(for = '') Thông tin tour
-        textarea(name = '' id = '')
+        label(for = 'information') Thông tin tour
+        textarea(name = 'information' id = 'information' textarea-mce)
       
       .inner-group.inner-two-col 
-        label(for = '') Lịch trình tour
+        label Lịch trình tour
 
-        .inner-schedule 
+        .inner-schedule
           .inner-schedule-list 
+
             .inner-schedule-item 
               .inner-schedule-head 
                 .inner-schedule-button.inner-move
                   <i class="fa-solid fa-arrows-up-down-left-right"></i>
-                input(type = 'text' name = '' id = '')
+                input(type = 'text')
                 .inner-schedule-button.inner-remove
                   <i class="fa-regular fa-trash-can"></i>
                 .inner-schedule-button.inner-more
                   <i class="fa-solid fa-angle-down"></i>
 
               .inner-schedule-body
-                textarea(name = '' id = '')
+                textarea(textarea-mce)
 
-            .inner-schedule-item 
-              .inner-schedule-head 
-                .inner-schedule-button.inner-move
-                  <i class="fa-solid fa-arrows-up-down-left-right"></i>
-                input(type = 'text' name = '' id = '')
-                .inner-schedule-button.inner-remove
-                  <i class="fa-regular fa-trash-can"></i>
-                .inner-schedule-button.inner-more
-                  <i class="fa-solid fa-angle-down"></i>
-
-              .inner-schedule-body
-                textarea(name = '' id = '')
-                
           .inner-schedule-create + Thêm lịch trình
       .inner-group.inner-two-col.text-center 
         button Tạo mới

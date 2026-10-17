@@ -110,7 +110,9 @@ input, textarea, select, button{
     font-size : 18px;
     color : var(--color-text);
     opacity : 0.6;
-    gap : 12px;
+    flex-wrap: wrap;
+    gap: 2px 12px;
+
 }
 
 .form-account .inner-meta a{
@@ -186,7 +188,8 @@ input, textarea, select, button{
     }
 
     .form-account .inner-check{
-        gap : 8px;
+        gap: 2px 8px;
+
     }
 
     .form-account .inner-check label, .form-account .inner-meta a{
@@ -206,9 +209,6 @@ input, textarea, select, button{
         font-size : 14px;
         margin-left : 5px;
     }
-
-
-
 }
 /* End Page Account */
 
@@ -491,6 +491,14 @@ input, textarea, select, button{
 @media(max-width : 992px){
     .sider{
         display : None;
+    }
+
+    .sider.show{
+        display : block;
+        position : fixed;
+        top : 0;
+        left : 0;
+        height : 100%;
     }
 }
 /* End Sider */
@@ -1103,7 +1111,7 @@ input, textarea, select, button{
     height : 160px;
 }
 
-.section-8 .inner-group button{
+.section-8 .inner-group > button{
     background-color : var(--color-main);
     color : #FFFFFF;
     padding : 16px;
@@ -1115,7 +1123,7 @@ input, textarea, select, button{
     font-size : 18px;
     cursor : pointer;
 }
-.section-8 .inner-group button:hover{
+.section-8 .inner-group > button:hover{
     opacity : 1;
 }
 .section-8 .inner-link{
@@ -1189,6 +1197,15 @@ input, textarea, select, button{
     border: 0.6px solid #D5D5D5;
     background-color: #FFFFFF;
     border-radius : 4px;
+}
+
+.section-8 .inner-schedule-item.hidden .inner-schedule-body{
+    display : none;
+
+}
+
+.section-8 .inner-schedule-item.hidden .inner-more i::before{
+    content : "\f106";
 }
 
 .section-8 .inner-schedule-item .inner-schedule-head{
@@ -1373,3 +1390,49 @@ input, textarea, select, button{
 
 }
 /* End section 10 */
+
+/* FilePond */
+.filepond--root {
+  width: 150px;
+  height: 150px !important;
+}
+
+.filepond--action-remove-item {
+  background-color: red;
+}
+
+.filepond--credits {
+  display: none;
+}
+
+.filepond--root .filepond--drop-label {
+  min-height: 150px;
+}
+
+.filepond--drop-label.filepond--drop-label label {
+  font-size: 50px;
+  margin-bottom: 0;
+  width: 150px;
+  height: 150px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* End FilePond */
+/* Just Validate */
+.just-validate-error-label {
+  font-size: 13px;
+  width: 100%;
+}
+
+.just-validate-error-field {
+  border-color: red !important;
+}
+
+.just-validate-success-field {
+  border-color: green !important;
+}
+/* End Just Validate */
